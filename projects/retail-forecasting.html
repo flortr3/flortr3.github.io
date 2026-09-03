@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retail Sales Time Series Forecasting | Flor Trejo</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            <a href="../index.html">FT</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- PROJECT INTRO -->
+
+        <section>
+
+            <p class="section-label">PROJECT 05</p>
+
+            <h1>Retail Sales Time Series Forecasting</h1>
+
+            <p>
+                A time series forecasting project comparing simple baseline
+                methods for predicting monthly retail sales and establishing
+                a benchmark before using more complex forecasting models.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section>
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                The objective of this project was to evaluate three simple
+                forecasting approaches and determine which method provided
+                the strongest benchmark for future retail sales forecasting.
+            </p>
+
+            <p>
+                Rolling one-month-ahead forecasts were generated for the
+                final 12 months of the dataset and evaluated using multiple
+                error metrics.
+            </p>
+
+        </section>
+
+
+        <!-- DATA -->
+
+        <section>
+
+            <p class="section-label">DATA</p>
+
+            <h2>Time Series Dataset</h2>
+
+            <p>
+                The dataset contains monthly retail sales observations from
+                January 2017 through December 2025.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Total Observations</p>
+                    <h3>108</h3>
+                    <span>Months</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Training Period</p>
+                    <h3>96</h3>
+                    <span>Months</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Test Period</p>
+                    <h3>12</h3>
+                    <span>Months</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Forecast Horizon</p>
+                    <h3>1</h3>
+                    <span>Month Ahead</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- METHODOLOGY -->
+
+        <section>
+
+            <p class="section-label">METHODOLOGY</p>
+
+            <h2>Chronological Evaluation</h2>
+
+            <p>
+                The final 12 months were used as the test period instead of
+                randomly selecting observations because time series data must
+                preserve chronological order.
+            </p>
+
+            <p>
+                For each test month, only information that would have been
+                available before that month was used to generate the forecast.
+                This prevents future information from leaking into the model.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Chronological Split</span>
+                <span>Rolling Forecast</span>
+                <span>Lag Features</span>
+                <span>MAE</span>
+                <span>RMSE</span>
+                <span>MAPE</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODELS -->
+
+        <section>
+
+            <p class="section-label">BASELINES</p>
+
+            <h2>Forecasting Methods</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Naive Forecast</strong>
+
+                    <p>
+                        Predicts the next month using the actual sales value
+                        from the immediately previous month.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Seasonal Naive</strong>
+
+                    <p>
+                        Predicts each month using sales from the same month
+                        one year earlier.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>3-Month Moving Average</strong>
+
+                    <p>
+                        Predicts the next month using the average of the
+                        previous three months of actual sales.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section>
+
+            <p class="section-label">RESULTS</p>
+
+            <h2>Forecast Performance</h2>
+
+            <p>
+                Seasonal Naive clearly produced the strongest forecasting
+                performance across all three evaluation metrics.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Seasonal Naive MAE</p>
+                    <h3>$4,815.83</h3>
+                    <span>Best MAE</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Seasonal Naive RMSE</p>
+                    <h3>$5,329.12</h3>
+                    <span>Forecast Error</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Seasonal Naive MAPE</p>
+                    <h3>4.83%</h3>
+                    <span>Percentage Error</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODEL COMPARISON -->
+
+        <section>
+
+            <p class="section-label">MODEL COMPARISON</p>
+
+            <h2>Comparing the Baselines</h2>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Naive</p>
+                    <h3>$10,890</h3>
+                    <span>MAE</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Seasonal Naive</p>
+                    <h3>$4,816</h3>
+                    <span>MAE — Best</span>
+                </div>
+
+                <div class="result-card">
+                    <p>3-Month Average</p>
+                    <h3>$13,194</h3>
+                    <span>MAE</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUSINESS INTERPRETATION -->
+
+        <section>
+
+            <p class="section-label">BUSINESS INTERPRETATION</p>
+
+            <h2>What Does the Best MAE Mean?</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Average error of approximately $4,816</strong>
+
+                    <p>
+                        The Seasonal Naive forecast differed from actual
+                        monthly sales by approximately $4,816 on average
+                        during the 12-month test period.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Seasonality is important</strong>
+
+                    <p>
+                        Using the same month from the previous year performed
+                        significantly better than relying only on recent
+                        monthly sales.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Strong forecasting benchmark</strong>
+
+                    <p>
+                        Any more sophisticated forecasting model should
+                        outperform the Seasonal Naive baseline before its
+                        additional complexity can be justified.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUALIZATIONS -->
+
+        <section>
+
+            <p class="section-label">VISUALIZATIONS</p>
+
+            <h2>Forecast Analysis</h2>
+
+            <div class="visualization-grid">
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/retail_sales_history.png"
+                         alt="Historical monthly retail sales">
+
+                    <h3>Historical Monthly Sales</h3>
+
+                    <p>
+                        The time series shows a long-term sales pattern
+                        together with recurring seasonal fluctuations.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/retail_forecast_comparison.png"
+                         alt="Retail baseline forecast comparison">
+
+                    <h3>Forecast Comparison</h3>
+
+                    <p>
+                        Seasonal Naive follows the annual peaks and declines
+                        more closely than the Naive and 3-month moving-average
+                        approaches.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/retail_error_metrics.png"
+                         alt="Retail forecasting error metric comparison">
+
+                    <h3>Error Comparison</h3>
+
+                    <p>
+                        Seasonal Naive produced substantially lower MAE and
+                        RMSE than the other baseline methods.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/retail_best_model_residuals.png"
+                         alt="Seasonal Naive forecast residuals">
+
+                    <h3>Seasonal Naive Residuals</h3>
+
+                    <p>
+                        Residual analysis shows the difference between actual
+                        sales and Seasonal Naive forecasts throughout the
+                        test period.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <section>
+
+            <p class="section-label">KEY FINDINGS</p>
+
+            <h2>What the Results Show</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Seasonal Naive was the strongest baseline</strong>
+
+                    <p>
+                        It achieved an MAE of $4,815.83 compared with
+                        $10,890.42 for Naive and $13,194.31 for the
+                        3-month moving average.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Annual seasonality matters</strong>
+
+                    <p>
+                        The same month from the previous year provided much
+                        more useful forecasting information than simply using
+                        the immediately previous month.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>The moving average smoothed important peaks</strong>
+
+                    <p>
+                        Averaging the previous three months reduced short-term
+                        variation but made it harder to follow sharp seasonal
+                        increases in sales.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Simple models can provide valuable benchmarks</strong>
+
+                    <p>
+                        A complex forecasting model should only be considered
+                        an improvement if it consistently beats this Seasonal
+                        Naive benchmark.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIMITATION -->
+
+        <section>
+
+            <p class="section-label">LIMITATION</p>
+
+            <h2>Model Limitation</h2>
+
+            <p>
+                Seasonal Naive assumes that seasonal patterns repeat from
+                one year to the next. It cannot directly adapt to structural
+                changes, unusual events, promotional effects, or sudden
+                changes in consumer behaviour.
+            </p>
+
+        </section>
+
+
+        <!-- TOOLS -->
+
+        <section>
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>Technologies Used</h2>
+
+            <div class="skills-grid">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>Matplotlib</span>
+                <span>Time Series</span>
+                <span>Forecasting</span>
+                <span>Jupyter Notebook</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAKEAWAYS -->
+
+        <section>
+
+            <p class="section-label">KEY TAKEAWAYS</p>
+
+            <h2>What I Learned</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Time series data requires chronological validation</strong>
+
+                    <p>
+                        Random train-test splits would allow future
+                        observations to influence predictions of the past.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Baseline models are essential</strong>
+
+                    <p>
+                        Simple forecasting approaches provide a benchmark
+                        against which more advanced models can be evaluated.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Different error metrics provide different insights</strong>
+
+                    <p>
+                        MAE provides an intuitive dollar interpretation,
+                        RMSE penalizes larger forecasting errors, and MAPE
+                        expresses error relative to actual sales.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+
+        <section class="resource-section">
+
+            <div class="resource-content">
+
+                <div>
+
+                    <p class="section-label">PROJECT RESOURCES</p>
+
+                    <h2>Explore the Full Project</h2>
+
+                    <p>
+                        Review the notebook for the complete chronological
+                        forecasting workflow, baseline evaluation, residual
+                        analysis, and Python implementation.
+                    </p>
+
+                </div>
+
+
+                <div class="resource-buttons">
+
+                    <a href="../index.html#projects"
+                       class="secondary-button">
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Flor Trejo</p>
+    </footer>
+
+</body>
+
+</html>
