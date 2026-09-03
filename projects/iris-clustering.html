@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iris K-Means Clustering | Flor Trejo</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            <a href="../index.html">FT</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- PROJECT INTRO -->
+
+        <section>
+
+            <p class="section-label">PROJECT 03</p>
+
+            <h1>Iris Species K-Means Clustering</h1>
+
+            <p>
+                An unsupervised machine learning project using K-Means
+                clustering to discover natural groups in the Iris dataset
+                and compare them with the known flower species.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section>
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                The objective of this project was to apply K-Means clustering
+                with K=3 to the Iris dataset and evaluate how closely the
+                resulting clusters corresponded to the three known species.
+            </p>
+
+            <p>
+                Because K-Means is an unsupervised learning algorithm, the
+                species labels were excluded from training and used only
+                after clustering for evaluation.
+            </p>
+
+        </section>
+
+
+        <!-- DATA -->
+
+        <section>
+
+            <p class="section-label">DATA</p>
+
+            <h2>Dataset</h2>
+
+            <p>
+                The Iris dataset contains 150 flower observations belonging
+                to three equally represented species.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Observations</p>
+                    <h3>150</h3>
+                    <span>Flowers</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Input Variables</p>
+                    <h3>4</h3>
+                    <span>Features</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Species</p>
+                    <h3>3</h3>
+                    <span>Classes</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Observations per Species</p>
+                    <h3>50</h3>
+                    <span>Balanced Dataset</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREPROCESSING -->
+
+        <section>
+
+            <p class="section-label">METHODOLOGY</p>
+
+            <h2>Data Preprocessing</h2>
+
+            <p>
+                The identifier column was removed because it does not contain
+                meaningful biological information. The Species column was
+                excluded from model training because K-Means must discover
+                clusters without using known class labels.
+            </p>
+
+            <p>
+                The four numerical measurement features were standardized
+                using StandardScaler because K-Means relies on Euclidean
+                distance and can be affected by differences in feature scale.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>ID Removal</span>
+                <span>Target Exclusion</span>
+                <span>StandardScaler</span>
+                <span>K-Means</span>
+                <span>Cluster Mapping</span>
+                <span>Model Evaluation</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODEL -->
+
+        <section>
+
+            <p class="section-label">MODEL</p>
+
+            <h2>K-Means Clustering</h2>
+
+            <p>
+                K-Means was configured with three clusters because the Iris
+                dataset contains three known species.
+            </p>
+
+            <p>
+                Since cluster labels such as 0, 1, and 2 are assigned
+                arbitrarily, the clusters were aligned with the known
+                species labels before evaluating the results.
+            </p>
+
+        </section>
+
+
+        <!-- RESULTS -->
+
+        <section>
+
+            <p class="section-label">RESULTS</p>
+
+            <h2>Final Model Performance</h2>
+
+            <p>
+                The selected K-Means configuration produced stable clusters
+                using k-means++ initialization and 20 initialization runs.
+                The externally mapped cluster agreement with the known species
+                was approximately 83.33%.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Cluster Agreement</p>
+                    <h3>83.33%</h3>
+                    <span>After Label Mapping</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Misclassified</p>
+                    <h3>25</h3>
+                    <span>Observations</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Silhouette Score</p>
+                    <h3>0.459</h3>
+                    <span>Cluster Separation</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Adjusted Rand Index</p>
+                    <h3>0.620</h3>
+                    <span>Cluster Agreement</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OPTIMIZATION -->
+
+        <section>
+
+            <p class="section-label">OPTIMIZATION</p>
+
+            <h2>Choosing init and n_init</h2>
+
+            <p>
+                Different combinations of initialization method and n_init
+                were evaluated to determine how centroid initialization
+                affected clustering stability.
+            </p>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>k-means++ performed more reliably</strong>
+
+                    <p>
+                        k-means++ reached the best observed clustering
+                        solution with fewer initialization attempts than
+                        random initialization.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Selected n_init = 20</strong>
+
+                    <p>
+                        With k-means++, the clustering result became stable
+                        by 20 initialization runs. Increasing n_init to 50
+                        or 100 produced no additional improvement.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Final configuration</strong>
+
+                    <p>
+                        K = 3, init = k-means++, n_init = 20,
+                        random_state = 42.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUALIZATIONS -->
+
+        <section>
+
+            <p class="section-label">VISUALIZATIONS</p>
+
+            <h2>Cluster Analysis</h2>
+
+            <div class="visualization-grid">
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/iris_confusion_matrix.png"
+                         alt="Iris K-Means mapped cluster confusion matrix">
+
+                    <h3>Cluster vs. Species Comparison</h3>
+
+                    <p>
+                        Setosa was separated perfectly, while the
+                        misclassifications occurred between Versicolor
+                        and Virginica.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/iris_misclassifications_by_ninit.png"
+                         alt="Misclassifications for different K-Means initialization settings">
+
+                    <h3>Initialization Stability</h3>
+
+                    <p>
+                        Increasing n_init reduced the risk of poor centroid
+                        initialization and produced a more stable solution.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/iris_pca_true_species.png"
+                         alt="PCA visualization of true Iris species">
+
+                    <h3>True Species</h3>
+
+                    <p>
+                        PCA was used to reduce the four standardized features
+                        to two dimensions for visualization.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/iris_pca_kmeans_clusters.png"
+                         alt="PCA visualization of K-Means Iris clusters">
+
+                    <h3>K-Means Clusters</h3>
+
+                    <p>
+                        The mapped K-Means clusters show strong separation
+                        for Setosa and overlap between Versicolor and
+                        Virginica.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <section>
+
+            <p class="section-label">KEY FINDINGS</p>
+
+            <h2>What the Results Show</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Setosa formed a distinct cluster</strong>
+
+                    <p>
+                        All 50 Setosa observations were grouped correctly,
+                        showing that this species is clearly separated in
+                        the feature space.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Versicolor and Virginica overlap</strong>
+
+                    <p>
+                        Eleven Versicolor observations were grouped with
+                        Virginica and fourteen Virginica observations were
+                        grouped with Versicolor.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>25 of 150 observations differed from the labels</strong>
+
+                    <p>
+                        After optimal cluster-to-species mapping, the
+                        clusters matched approximately 83.33% of the known
+                        class labels.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>PCA retained 95.80% of the variance</strong>
+
+                    <p>
+                        The first two principal components preserved most
+                        of the information in the standardized four-feature
+                        dataset and provided a useful visualization of the
+                        cluster structure.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLS -->
+
+        <section>
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>Technologies Used</h2>
+
+            <div class="skills-grid">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>KMeans</span>
+                <span>StandardScaler</span>
+                <span>PCA</span>
+                <span>Matplotlib</span>
+                <span>Jupyter Notebook</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAKEAWAYS -->
+
+        <section>
+
+            <p class="section-label">KEY TAKEAWAYS</p>
+
+            <h2>What I Learned</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Clustering is different from classification</strong>
+
+                    <p>
+                        K-Means discovers groups using only feature similarity
+                        and does not learn from known class labels.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Scaling is important for distance-based models</strong>
+
+                    <p>
+                        Standardizing the measurements prevents features with
+                        larger numerical ranges from dominating Euclidean
+                        distance.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Cluster numbers have no inherent meaning</strong>
+
+                    <p>
+                        Cluster IDs must be aligned with known labels before
+                        making an external comparison with species.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+
+        <section class="resource-section">
+
+            <div class="resource-content">
+
+                <div>
+
+                    <p class="section-label">PROJECT RESOURCES</p>
+
+                    <h2>Explore the Full Project</h2>
+
+                    <p>
+                        Review the notebook for the complete preprocessing,
+                        K-Means experiments, cluster evaluation, and PCA
+                        visualization workflow.
+                    </p>
+
+                </div>
+
+                <div class="resource-buttons">
+
+                    <a href="../index.html#projects"
+                       class="secondary-button">
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Flor Trejo</p>
+    </footer>
+
+</body>
+
+</html>
