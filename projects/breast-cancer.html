@@ -12,7 +12,10 @@
 
 <body>
 
+    <!-- NAVIGATION -->
+
     <nav>
+
         <div class="logo">
             <a href="../index.html">FT</a>
         </div>
@@ -23,12 +26,13 @@
             <a href="../index.html#skills">Skills</a>
             <a href="../index.html#contact">Contact</a>
         </div>
+
     </nav>
 
 
     <main>
 
-        <!-- PROJECT INTRODUCTION -->
+        <!-- PROJECT INTRO -->
 
         <section>
 
@@ -37,15 +41,15 @@
             <h1>Breast Cancer Neural Network Classification</h1>
 
             <p>
-                A machine learning classification project using a multilayer
-                perceptron neural network to classify breast tumors as
-                malignant or benign based on diagnostic measurements.
+                A neural network classification project focused on predicting
+                whether breast tumors are malignant or benign using diagnostic
+                measurements.
             </p>
 
         </section>
 
 
-        <!-- PROJECT OVERVIEW -->
+        <!-- OVERVIEW -->
 
         <section>
 
@@ -54,64 +58,95 @@
             <h2>Project Overview</h2>
 
             <p>
-                The objective of this project was to build and evaluate a
-                neural network classification model capable of identifying
-                whether a breast tumor is malignant or benign.
+                The objective of this project was to develop and optimize a
+                Multilayer Perceptron neural network for binary breast cancer
+                classification.
             </p>
 
             <p>
-                The project focused not only on prediction performance,
-                but also on understanding neural network architecture,
-                preprocessing requirements, model training, and optimization.
+                The project explored data preprocessing, feature scaling,
+                neural network architecture, model evaluation, training loss,
+                and architecture optimization.
             </p>
 
         </section>
 
 
-        <!-- PROBLEM -->
+        <!-- DATASET -->
 
         <section>
 
-            <p class="section-label">PROBLEM</p>
+            <p class="section-label">DATA</p>
 
-            <h2>Classification Problem</h2>
-
-            <p>
-                Diagnostic measurements describing characteristics of cell
-                nuclei are used as input features. The neural network learns
-                patterns within these measurements to classify each observation
-                into one of two diagnostic categories.
-            </p>
-
-        </section>
-
-
-        <!-- PREPROCESSING -->
-
-        <section>
-
-            <p class="section-label">DATA PREPROCESSING</p>
-
-            <h2>Preparing the Data</h2>
+            <h2>Dataset</h2>
 
             <p>
-                Before training the neural network, the dataset was prepared
-                to ensure that the model received appropriate numerical inputs.
+                The dataset contains diagnostic measurements describing
+                characteristics of cell nuclei extracted from breast mass
+                images.
             </p>
 
-            <div class="skills-grid">
+            <div class="results-grid">
 
-                <span>Remove ID Feature</span>
-                <span>Target Encoding</span>
-                <span>Train-Test Split</span>
-                <span>Feature Scaling</span>
+                <div class="result-card">
+                    <p>Observations</p>
+                    <h3>569</h3>
+                    <span>Samples</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Input Variables</p>
+                    <h3>30</h3>
+                    <span>Features</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Benign</p>
+                    <h3>357</h3>
+                    <span>Cases</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Malignant</p>
+                    <h3>212</h3>
+                    <span>Cases</span>
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- NEURAL NETWORK -->
+        <!-- METHODOLOGY -->
+
+        <section>
+
+            <p class="section-label">METHODOLOGY</p>
+
+            <h2>Approach</h2>
+
+            <p>
+                The data was prepared before neural network training by
+                removing the identifier column, encoding the target variable,
+                splitting the data into training and testing sets, and
+                standardizing the numerical features.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Data Exploration</span>
+                <span>ID Removal</span>
+                <span>Target Encoding</span>
+                <span>Train-Test Split</span>
+                <span>StandardScaler</span>
+                <span>MLPClassifier</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODEL -->
 
         <section>
 
@@ -120,205 +155,167 @@
             <h2>Neural Network Architecture</h2>
 
             <p>
-                A Multilayer Perceptron classifier was used to learn nonlinear
-                relationships between the diagnostic features and the target
-                diagnosis.
+                The baseline model used a Multilayer Perceptron with one
+                hidden layer containing 30 neurons.
             </p>
 
             <p>
-                Different hidden-layer configurations and neuron counts were
-                explored to evaluate whether changes in network complexity
-                improved classification performance.
+                Additional architectures were then evaluated using
+                cross-validation to determine whether increasing network
+                complexity improved classification performance.
             </p>
-
-            <div class="skills-grid">
-
-                <span>Input Layer</span>
-                <span>Hidden Layers</span>
-                <span>Output Classification</span>
-                <span>Backpropagation</span>
-
-            </div>
 
         </section>
 
 
-        <!-- EVALUATION -->
+        <!-- RESULTS -->
 
         <section>
 
-            <p class="section-label">MODEL EVALUATION</p>
+            <p class="section-label">RESULTS</p>
 
-            <h2>Evaluating Performance</h2>
+            <h2>Model Performance</h2>
 
             <p>
-                Model performance was evaluated using several classification
-                metrics to understand both overall prediction accuracy and
-                the types of classification errors made by the neural network.
+                Optimizing the neural network architecture improved
+                classification performance on the held-out test set.
             </p>
 
-            <div class="skills-grid">
+            <div class="results-grid">
 
-                <span>Accuracy</span>
-                <span>Confusion Matrix</span>
-                <span>Precision</span>
-                <span>Recall</span>
-                <span>F1-Score</span>
-                <span>Classification Report</span>
+                <div class="result-card">
+                    <p>Baseline Neural Network</p>
+                    <h3>97.37%</h3>
+                    <span>Test Accuracy</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Optimized Neural Network</p>
+                    <h3>98.25%</h3>
+                    <span>Test Accuracy</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Best Cross-Validation</p>
+                    <h3>97.80%</h3>
+                    <span>Mean CV Accuracy</span>
+                </div>
 
             </div>
 
         </section>
 
-<section>
 
-    <p class="section-label">RESULTS</p>
-
-    <h2>Model Performance</h2>
-
-    <p>
-        Optimizing the neural network architecture improved classification
-        performance on the held-out test set. The optimized model achieved
-        98.25% accuracy compared with 97.37% for the baseline network.
-    </p>
-
-    <div class="results-grid">
-
-        <div class="result-card">
-            <p>Baseline Neural Network</p>
-            <h3>97.37%</h3>
-            <span>Test Accuracy</span>
-        </div>
-
-        <div class="result-card">
-            <p>Optimized Neural Network</p>
-            <h3>98.25%</h3>
-            <span>Test Accuracy</span>
-        </div>
-
-        <div class="result-card">
-            <p>Best Cross-Validation</p>
-            <h3>97.80%</h3>
-            <span>Mean CV Accuracy</span>
-        </div>
-
-    </div>
-
-</section>
-        
         <!-- OPTIMIZATION -->
 
-<section>
+        <section>
 
-    <p class="section-label">OPTIMIZATION</p>
+            <p class="section-label">OPTIMIZATION</p>
 
-    <h2>Architecture Optimization</h2>
+            <h2>Architecture Optimization</h2>
 
-    <p>
-        Several neural network architectures were evaluated using
-        GridSearchCV with 5-fold cross-validation.
-    </p>
+            <div class="findings-list">
 
-    <p>
-        The baseline network contained one hidden layer with 30 neurons.
-        The best-performing configuration used two hidden layers with
-        100 and 50 neurons.
-    </p>
+                <div>
 
-    <div class="findings-list">
+                    <strong>Baseline: 30 neurons</strong>
 
-        <div>
-            <strong>Baseline: 30 neurons</strong>
-            <p>
-                One hidden layer produced 97.37% test accuracy.
-            </p>
-        </div>
+                    <p>
+                        The initial neural network used one hidden layer
+                        containing 30 neurons and achieved 97.37% test accuracy.
+                    </p>
 
-        <div>
-            <strong>Optimized: 100 → 50 neurons</strong>
-            <p>
-                Two hidden layers increased test accuracy to 98.25%.
-            </p>
-        </div>
+                </div>
 
-        <div>
-            <strong>Fewer malignant cases missed</strong>
-            <p>
-                The baseline model misclassified 3 malignant cases as benign,
-                while the optimized network reduced this number to 2.
-            </p>
-        </div>
 
-    </div>
+                <div>
 
-</section>
+                    <strong>Optimized: 100 → 50 neurons</strong>
+
+                    <p>
+                        The selected architecture contained two hidden layers
+                        with 100 and 50 neurons and achieved 98.25% accuracy.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Improved malignant-case detection</strong>
+
+                    <p>
+                        The baseline model classified 3 malignant cases as
+                        benign. The optimized architecture reduced this
+                        number to 2.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUALIZATIONS -->
 
         <section>
 
-    <p class="section-label">VISUALIZATIONS</p>
+            <p class="section-label">VISUALIZATIONS</p>
 
-    <h2>Model Analysis</h2>
+            <h2>Model Analysis</h2>
 
-    <div class="visualization-grid">
-
-        <div class="visualization-card">
-            <img src="../assets/baseline_confusion_matrix.png"
-                 alt="Baseline neural network confusion matrix">
-
-            <h3>Baseline Confusion Matrix</h3>
-
-            <p>
-                The baseline model correctly classified all 72 benign cases
-                and 39 of 42 malignant cases.
-            </p>
-        </div>
+            <div class="visualization-grid">
 
 
-        <div class="visualization-card">
-            <img src="../assets/optimized_confusion_matrix.png"
-                 alt="Optimized neural network confusion matrix">
+                <div class="visualization-card">
 
-            <h3>Optimized Confusion Matrix</h3>
+                    <img src="../assets/baseline_confusion_matrix.png"
+                         alt="Baseline neural network confusion matrix">
 
-            <p>
-                After architecture optimization, the model correctly
-                identified 40 of 42 malignant cases while maintaining
-                perfect classification of the benign cases.
-            </p>
-        </div>
+                    <h3>Baseline Confusion Matrix</h3>
 
+                    <p>
+                        The baseline network correctly classified all
+                        72 benign observations and 39 of the 42 malignant
+                        observations in the test set.
+                    </p>
 
-        <div class="visualization-card">
-            <img src="../assets/loss_curve_comparison.png"
-                 alt="Baseline and optimized neural network loss curves">
-
-            <h3>Training Loss Comparison</h3>
-
-            <p>
-                Comparing the loss curves shows how the two architectures
-                converged during training.
-            </p>
-        </div>
-
-    </div>
-
-</section>
+                </div>
 
 
-        <!-- LOSS CURVE -->
+                <div class="visualization-card">
 
-        <section>
+                    <img src="../assets/optimized_confusion_matrix.png"
+                         alt="Optimized neural network confusion matrix">
 
-            <p class="section-label">TRAINING</p>
+                    <h3>Optimized Confusion Matrix</h3>
 
-            <h2>Loss Curve</h2>
+                    <p>
+                        After architecture optimization, the neural network
+                        correctly identified 40 of the 42 malignant cases.
+                    </p>
 
-            <p>
-                The training loss was monitored across iterations to understand
-                how the neural network learned over time. A decreasing loss
-                indicates that the model is progressively reducing prediction
-                error during training.
-            </p>
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/loss_curve_comparison.png"
+                         alt="Neural network loss curve comparison">
+
+                    <h3>Training Loss Comparison</h3>
+
+                    <p>
+                        The loss curves illustrate how both neural network
+                        architectures reduced prediction error during
+                        training.
+                    </p>
+
+                </div>
+
+
+            </div>
 
         </section>
 
@@ -337,9 +334,10 @@
                 <span>Pandas</span>
                 <span>NumPy</span>
                 <span>Scikit-learn</span>
-                <span>Matplotlib</span>
                 <span>MLPClassifier</span>
                 <span>StandardScaler</span>
+                <span>GridSearchCV</span>
+                <span>Matplotlib</span>
                 <span>Jupyter Notebook</span>
 
             </div>
@@ -347,7 +345,7 @@
         </section>
 
 
-        <!-- TAKEAWAYS -->
+        <!-- KEY TAKEAWAYS -->
 
         <section>
 
@@ -358,35 +356,40 @@
             <div class="findings-list">
 
                 <div>
-                    <strong>Scaling matters for neural networks</strong>
+
+                    <strong>Feature scaling is important</strong>
+
                     <p>
-                        Standardizing features helps neural networks train more
-                        effectively when input variables have different scales.
+                        Neural networks perform more effectively when numerical
+                        features with different ranges are standardized before
+                        training.
                     </p>
+
                 </div>
 
-                <div>
-                    <strong>Architecture affects performance</strong>
-                    <p>
-                        Changing hidden layers and neurons can influence both
-                        predictive performance and model complexity.
-                    </p>
-                </div>
 
                 <div>
-                    <strong>Accuracy alone is not enough</strong>
+
+                    <strong>Architecture influences performance</strong>
+
                     <p>
-                        The confusion matrix, precision, recall, and F1-score
-                        provide a more complete view of classification quality.
+                        Increasing network complexity improved classification
+                        accuracy in this experiment.
                     </p>
+
                 </div>
 
+
                 <div>
-                    <strong>Training loss provides useful information</strong>
+
+                    <strong>Accuracy does not tell the whole story</strong>
+
                     <p>
-                        The loss curve helps visualize whether the neural
-                        network is successfully learning during training.
+                        Confusion matrices were particularly useful for
+                        understanding which malignant and benign cases were
+                        incorrectly classified.
                     </p>
+
                 </div>
 
             </div>
@@ -407,12 +410,13 @@
                     <h2>Explore the Full Project</h2>
 
                     <p>
-                        Review the notebook for the complete preprocessing,
-                        neural network architecture, model evaluation,
-                        optimization, and Python implementation.
+                        Review the complete notebook for the Python
+                        implementation, preprocessing, model architecture,
+                        optimization, and evaluation.
                     </p>
 
                 </div>
+
 
                 <div class="resource-buttons">
 
@@ -427,12 +431,14 @@
 
         </section>
 
+
     </main>
 
 
     <footer>
         <p>© 2026 Flor Trejo</p>
     </footer>
+
 
 </body>
 
