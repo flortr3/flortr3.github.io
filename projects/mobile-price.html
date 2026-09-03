@@ -44,23 +44,92 @@
 
         <section>
 
-            <p class="section-label">OVERVIEW</p>
+            <section>
 
-            <h2>Project Overview</h2>
+    <p class="section-label">RESULTS</p>
 
+    <h2>Model Performance</h2>
+
+    <p>
+        Hyperparameter optimization significantly improved the performance
+        of the baseline Support Vector Machine. Both Hyperopt and Optuna
+        achieved the highest average classification accuracy of 97.60%.
+    </p>
+
+    <div class="results-grid">
+
+        <div class="result-card">
+            <p>Baseline SVM</p>
+            <h3>95.15%</h3>
+            <span>Accuracy</span>
+        </div>
+
+        <div class="result-card">
+            <p>SVM + Hyperopt</p>
+            <h3>97.60%</h3>
+            <span>Accuracy</span>
+        </div>
+
+        <div class="result-card">
+            <p>SVM + Optuna</p>
+            <h3>97.60%</h3>
+            <span>Accuracy</span>
+        </div>
+
+        <div class="result-card">
+            <p>Logistic Regression</p>
+            <h3>96.10%</h3>
+            <span>Accuracy</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <p class="section-label">KEY FINDINGS</p>
+
+    <h2>What the Results Show</h2>
+
+    <div class="findings-list">
+
+        <div>
+            <strong>+2.45 percentage points</strong>
             <p>
-                The goal of this project was to explore the relationship between
-                mobile phone specifications and their price categories.
-
-                Using a dataset containing technical characteristics such as RAM,
-                battery power, internal memory, processor specifications, and
-                camera features, I developed and evaluated machine learning
-                classification models to predict the phone's price range.
+                Hyperparameter optimization improved SVM accuracy from
+                95.15% to 97.60%.
             </p>
+        </div>
 
-        </section>
+        <div>
+            <strong>97.60% best accuracy</strong>
+            <p>
+                Hyperopt and Optuna produced the same average accuracy
+                in this replication.
+            </p>
+        </div>
 
+        <div>
+            <strong>RAM was the strongest feature</strong>
+            <p>
+                RAM showed the strongest relationship with mobile phone
+                price category, with a correlation of approximately 0.917.
+            </p>
+        </div>
 
+        <div>
+            <strong>Logistic Regression: 96.10%</strong>
+            <p>
+                Logistic Regression provided a strong simpler alternative,
+                outperforming the baseline SVM while remaining below the
+                optimized SVM models.
+            </p>
+        </div>
+
+    </div>
+
+</section>
         <section>
 
             <p class="section-label">BUSINESS PROBLEM</p>
