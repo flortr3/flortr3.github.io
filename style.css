@@ -286,12 +286,10 @@ margin-bottom: 30px;
    CONTACT
 ========================= */
 
-#contact {
-    background-color: #ebe5dd;
-
-    padding: 60px;
-
-    border-radius: 8px;
+.contact-card {
+    background-color: var(--section-background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
 }
 
 /* =========================
@@ -758,7 +756,7 @@ nav {
 }
 
 .logo a {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .nav-links a {
