@@ -13,6 +13,7 @@
 <body>
 
     <nav>
+
         <div class="logo">
             <a href="../index.html">FT</a>
         </div>
@@ -23,228 +24,71 @@
             <a href="../index.html#skills">Skills</a>
             <a href="../index.html#contact">Contact</a>
         </div>
+
     </nav>
 
 
     <main>
 
-        <section class="resource-section">
+        <!-- PROJECT INTRO -->
 
-    <section class="resource-section">
-
-    <div class="resource-content">
-
-        <div>
-            <p class="section-label">PROJECT RESOURCES</p>
-
-            <h2>Explore the Full Project</h2>
-
-            <p>
-                Review the complete presentation for a visual summary of the
-                research paper, methodology, optimization process, results,
-                and project contribution.
-            </p>
-        </div>
-
-        <div class="resource-buttons">
-
-            <a href="https://canva.link/uov9ks1l08h8c2q"
-               target="_blank"
-               class="primary-button">
-                View Presentation
-            </a>
-
-            <a href="../index.html#projects"
-               class="secondary-button">
-                Back to Projects
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-            
-    <p class="section-label">RESULTS</p>
-
-    <h2>Model Performance</h2>
-<section>
-
-    <p class="section-label">VISUALIZATIONS</p>
-
-    <h2>Project Visualizations</h2>
-
-    <div class="visualization-grid">
-
-        <div class="visualization-card">
-            <img src="../assets/target_distribution.png"
-                 alt="Target distribution of mobile phone price classes">
-
-            <h3>Balanced Target Distribution</h3>
-
-            <p>
-                The dataset contains four equally represented price categories,
-                with 500 mobile phones in each class.
-            </p>
-        </div>
-
-
-        <div class="visualization-card">
-            <img src="../assets/ram_vs_price_range.png"
-                 alt="Relationship between RAM and mobile phone price range">
-
-            <h3>RAM vs. Price Range</h3>
-
-            <p>
-                RAM showed the strongest relationship with price category,
-                indicating that memory capacity is an important predictor
-                of mobile phone price positioning.
-            </p>
-        </div>
-
-
-        <div class="visualization-card">
-            <img src="../assets/model_accuracy_comparison.png"
-                 alt="Accuracy comparison of machine learning models">
-
-            <h3>Model Accuracy Comparison</h3>
-
-            <p>
-                Hyperopt and Optuna produced the strongest results,
-                increasing average SVM accuracy from 95.15% to 97.60%.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-                <section>
-
-    <p class="section-label">MY CONTRIBUTION</p>
-
-    <h2>Logistic Regression Extension</h2>
-
-    <p>
-        In addition to reproducing the SVM methodology from the research
-        paper, I evaluated Logistic Regression as a simpler and more
-        interpretable multiclass classification alternative.
-    </p>
-
-    <p>
-        StandardScaler and Logistic Regression were combined inside a
-        Scikit-learn Pipeline so that scaling was learned only from the
-        training data within each fold, preventing preprocessing leakage.
-        The model was evaluated using the same 5-fold stratified
-        cross-validation framework for a fair comparison.
-    </p>
-
-    <div class="result-card contribution-result">
-
-        <p>Logistic Regression</p>
-
-        <h3>96.10%</h3>
-
-        <span>Average Accuracy</span>
-
-    </div>
-
-</section>
-    <p>
-        Hyperparameter optimization significantly improved the performance
-        of the baseline Support Vector Machine. Both Hyperopt and Optuna
-        achieved the highest average classification accuracy of 97.60%.
-    </p>
-
-    <div class="results-grid">
-
-        <div class="result-card">
-            <p>Baseline SVM</p>
-            <h3>95.15%</h3>
-            <span>Accuracy</span>
-        </div>
-
-        <div class="result-card">
-            <p>SVM + Hyperopt</p>
-            <h3>97.60%</h3>
-            <span>Accuracy</span>
-        </div>
-
-        <div class="result-card">
-            <p>SVM + Optuna</p>
-            <h3>97.60%</h3>
-            <span>Accuracy</span>
-        </div>
-
-        <div class="result-card">
-            <p>Logistic Regression</p>
-            <h3>96.10%</h3>
-            <span>Accuracy</span>
-        </div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <p class="section-label">KEY FINDINGS</p>
-
-    <h2>What the Results Show</h2>
-
-    <div class="findings-list">
-
-        <div>
-            <strong>+2.45 percentage points</strong>
-            <p>
-                Hyperparameter optimization improved SVM accuracy from
-                95.15% to 97.60%.
-            </p>
-        </div>
-
-        <div>
-            <strong>97.60% best accuracy</strong>
-            <p>
-                Hyperopt and Optuna produced the same average accuracy
-                in this replication.
-            </p>
-        </div>
-
-        <div>
-            <strong>RAM was the strongest feature</strong>
-            <p>
-                RAM showed the strongest relationship with mobile phone
-                price category, with a correlation of approximately 0.917.
-            </p>
-        </div>
-
-        <div>
-            <strong>Logistic Regression: 96.10%</strong>
-            <p>
-                Logistic Regression provided a strong simpler alternative,
-                outperforming the baseline SVM while remaining below the
-                optimized SVM models.
-            </p>
-        </div>
-
-    </div>
-
-</section>
         <section>
 
-            <p class="section-label">BUSINESS PROBLEM</p>
+            <p class="section-label">PROJECT 01</p>
 
-            <h2>Problem</h2>
+            <h1>Mobile Phone Price Classification</h1>
 
             <p>
-                A mobile phone company wants to better understand how product
-                specifications influence price positioning.
-
-                A predictive model can help estimate the appropriate market
-                price category for new devices based on their technical features.
+                A multiclass machine learning project focused on classifying
+                mobile phones into four price categories using Support Vector
+                Machines, hyperparameter optimization, and Logistic Regression.
             </p>
 
         </section>
 
+
+        <!-- OVERVIEW -->
+
+        <section>
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project replicates and extends a published research study
+                on mobile phone price classification.
+            </p>
+
+            <p>
+                The original methodology used Support Vector Machines and
+                hyperparameter optimization frameworks. I reproduced the
+                approach, improved the validation workflow, and added Logistic
+                Regression as an additional classification model.
+            </p>
+
+        </section>
+
+
+        <!-- BUSINESS PROBLEM -->
+
+        <section>
+
+            <p class="section-label">PROBLEM</p>
+
+            <h2>Business Problem</h2>
+
+            <p>
+                The objective is to classify mobile phones into four market
+                price categories based on technical specifications such as
+                RAM, battery power, storage, display resolution, cameras,
+                processor characteristics, and connectivity features.
+            </p>
+
+        </section>
+
+
+        <!-- DATA -->
 
         <section>
 
@@ -253,16 +97,43 @@
             <h2>Dataset</h2>
 
             <p>
-                The dataset contains multiple technical features describing
-                mobile phones, including battery power, RAM, internal memory,
-                screen dimensions, camera specifications, connectivity features,
-                and processor characteristics.
-
-                The target variable represents four mobile phone price ranges.
+                The dataset contains 2,000 mobile phones and 20 technical
+                input features. The target variable contains four equally
+                represented price categories.
             </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Observations</p>
+                    <h3>2,000</h3>
+                    <span>Mobile Phones</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Input Variables</p>
+                    <h3>20</h3>
+                    <span>Features</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Price Categories</p>
+                    <h3>4</h3>
+                    <span>Classes</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Observations per Class</p>
+                    <h3>500</h3>
+                    <span>Balanced Dataset</span>
+                </div>
+
+            </div>
 
         </section>
 
+
+        <!-- METHODOLOGY -->
 
         <section>
 
@@ -271,24 +142,233 @@
             <h2>Approach</h2>
 
             <p>
-                The project included data exploration, preprocessing, feature
-                analysis, model training, model evaluation, and comparison
-                between classification approaches.
+                The project used five-fold stratified cross-validation to
+                evaluate model performance while maintaining the same class
+                distribution across folds.
+            </p>
+
+            <p>
+                Hyperopt and Optuna were used to optimize important SVM
+                hyperparameters including kernel type, C, gamma, and
+                multiclass decision strategy.
             </p>
 
             <div class="skills-grid">
 
                 <span>Data Exploration</span>
-                <span>Data Preprocessing</span>
-                <span>Feature Analysis</span>
-                <span>Classification</span>
-                <span>Model Evaluation</span>
-                <span>Hyperparameter Optimization</span>
+                <span>5-Fold Cross-Validation</span>
+                <span>Support Vector Machine</span>
+                <span>Hyperopt</span>
+                <span>Optuna</span>
+                <span>Logistic Regression</span>
 
             </div>
 
         </section>
 
+
+        <!-- RESULTS -->
+
+        <section>
+
+            <p class="section-label">RESULTS</p>
+
+            <h2>Model Performance</h2>
+
+            <p>
+                Hyperparameter optimization improved the performance of the
+                baseline Support Vector Machine. Hyperopt and Optuna achieved
+                the strongest average classification accuracy.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Baseline SVM</p>
+                    <h3>95.15%</h3>
+                    <span>Accuracy</span>
+                </div>
+
+                <div class="result-card">
+                    <p>SVM + Hyperopt</p>
+                    <h3>97.60%</h3>
+                    <span>Accuracy</span>
+                </div>
+
+                <div class="result-card">
+                    <p>SVM + Optuna</p>
+                    <h3>97.60%</h3>
+                    <span>Accuracy</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Logistic Regression</p>
+                    <h3>96.10%</h3>
+                    <span>Accuracy</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <section>
+
+            <p class="section-label">KEY FINDINGS</p>
+
+            <h2>What the Results Show</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>+2.45 percentage points</strong>
+
+                    <p>
+                        Hyperparameter optimization improved SVM accuracy
+                        from 95.15% to 97.60%.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>97.60% best accuracy</strong>
+
+                    <p>
+                        Hyperopt and Optuna produced the same average accuracy
+                        in this project.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>RAM was the strongest feature</strong>
+
+                    <p>
+                        RAM showed the strongest relationship with mobile
+                        phone price category, with a correlation of
+                        approximately 0.917.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Logistic Regression reached 96.10%</strong>
+
+                    <p>
+                        Logistic Regression provided a strong simpler
+                        alternative while remaining below the optimized
+                        SVM models.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUALIZATIONS -->
+
+        <section>
+
+            <p class="section-label">VISUALIZATIONS</p>
+
+            <h2>Project Visualizations</h2>
+
+            <div class="visualization-grid">
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/target_distribution.png"
+                         alt="Mobile phone price class distribution">
+
+                    <h3>Balanced Target Distribution</h3>
+
+                    <p>
+                        The dataset contains four equally represented price
+                        categories with 500 mobile phones in each class.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/ram_vs_price_range.png"
+                         alt="Relationship between RAM and mobile phone price range">
+
+                    <h3>RAM vs. Price Range</h3>
+
+                    <p>
+                        RAM showed the strongest relationship with price
+                        category and was an important predictor of mobile
+                        phone market positioning.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/model_accuracy_comparison.png"
+                         alt="Machine learning model accuracy comparison">
+
+                    <h3>Model Accuracy Comparison</h3>
+
+                    <p>
+                        Hyperopt and Optuna increased average SVM accuracy
+                        from 95.15% to 97.60%.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTRIBUTION -->
+
+        <section>
+
+            <p class="section-label">MY CONTRIBUTION</p>
+
+            <h2>Logistic Regression Extension</h2>
+
+            <p>
+                In addition to reproducing the SVM methodology from the
+                research paper, I evaluated Logistic Regression as a simpler
+                and more interpretable multiclass classification alternative.
+            </p>
+
+            <p>
+                StandardScaler and Logistic Regression were combined inside
+                a Scikit-learn Pipeline so scaling was learned only from the
+                training data within each fold.
+            </p>
+
+            <div class="result-card contribution-result">
+
+                <p>Logistic Regression</p>
+                <h3>96.10%</h3>
+                <span>Average Accuracy</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLS -->
 
         <section>
 
@@ -302,6 +382,10 @@
                 <span>Pandas</span>
                 <span>NumPy</span>
                 <span>Scikit-learn</span>
+                <span>SVM</span>
+                <span>Hyperopt</span>
+                <span>Optuna</span>
+                <span>Logistic Regression</span>
                 <span>Matplotlib</span>
                 <span>Jupyter Notebook</span>
 
@@ -310,23 +394,7 @@
         </section>
 
 
-        <section>
-
-            <p class="section-label">RESULTS</p>
-
-            <h2>Key Results</h2>
-
-            <p>
-                The classification models demonstrated that mobile phone
-                specifications can be used effectively to predict price
-                categories.
-
-                Model comparison and optimization helped identify the strongest
-                approach for this dataset.
-            </p>
-
-        </section>
-
+        <!-- TAKEAWAYS -->
 
         <section>
 
@@ -334,16 +402,52 @@
 
             <h2>What I Learned</h2>
 
-            <p>
-                This project strengthened my understanding of classification,
-                model comparison, hyperparameter tuning, data preprocessing,
-                and the importance of connecting machine learning results with
-                a real business problem.
-            </p>
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Hyperparameter optimization can improve performance</strong>
+
+                    <p>
+                        Optimizing SVM parameters produced a measurable
+                        improvement over the baseline model.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Validation methodology matters</strong>
+
+                    <p>
+                        Keeping model selection separate from final evaluation
+                        reduces the risk of data leakage and overly optimistic
+                        performance estimates.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>More complex is not always necessary</strong>
+
+                    <p>
+                        Logistic Regression achieved strong performance and
+                        provided a simpler alternative for comparison.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
- <section class="resource-section">
+
+        <!-- RESOURCES -->
+
+        <section class="resource-section">
 
             <div class="resource-content">
 
@@ -354,15 +458,21 @@
                     <h2>Explore the Full Project</h2>
 
                     <p>
-                        Review the complete notebook for data cleaning,
-                        preprocessing, model comparison, SMOTE implementation,
-                        and evaluation.
+                        Review the complete presentation for a visual summary
+                        of the research paper, methodology, optimization
+                        process, results, and project contribution.
                     </p>
 
                 </div>
 
 
                 <div class="resource-buttons">
+
+                    <a href="https://canva.link/uov9ks1l08h8c2q"
+                       target="_blank"
+                       class="primary-button">
+                        View Presentation
+                    </a>
 
                     <a href="../index.html#projects"
                        class="secondary-button">
