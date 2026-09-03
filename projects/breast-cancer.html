@@ -170,27 +170,139 @@
 
         </section>
 
+<section>
 
+    <p class="section-label">RESULTS</p>
+
+    <h2>Model Performance</h2>
+
+    <p>
+        Optimizing the neural network architecture improved classification
+        performance on the held-out test set. The optimized model achieved
+        98.25% accuracy compared with 97.37% for the baseline network.
+    </p>
+
+    <div class="results-grid">
+
+        <div class="result-card">
+            <p>Baseline Neural Network</p>
+            <h3>97.37%</h3>
+            <span>Test Accuracy</span>
+        </div>
+
+        <div class="result-card">
+            <p>Optimized Neural Network</p>
+            <h3>98.25%</h3>
+            <span>Test Accuracy</span>
+        </div>
+
+        <div class="result-card">
+            <p>Best Cross-Validation</p>
+            <h3>97.80%</h3>
+            <span>Mean CV Accuracy</span>
+        </div>
+
+    </div>
+
+</section>
+        
         <!-- OPTIMIZATION -->
+
+<section>
+
+    <p class="section-label">OPTIMIZATION</p>
+
+    <h2>Architecture Optimization</h2>
+
+    <p>
+        Several neural network architectures were evaluated using
+        GridSearchCV with 5-fold cross-validation.
+    </p>
+
+    <p>
+        The baseline network contained one hidden layer with 30 neurons.
+        The best-performing configuration used two hidden layers with
+        100 and 50 neurons.
+    </p>
+
+    <div class="findings-list">
+
+        <div>
+            <strong>Baseline: 30 neurons</strong>
+            <p>
+                One hidden layer produced 97.37% test accuracy.
+            </p>
+        </div>
+
+        <div>
+            <strong>Optimized: 100 → 50 neurons</strong>
+            <p>
+                Two hidden layers increased test accuracy to 98.25%.
+            </p>
+        </div>
+
+        <div>
+            <strong>Fewer malignant cases missed</strong>
+            <p>
+                The baseline model misclassified 3 malignant cases as benign,
+                while the optimized network reduced this number to 2.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
         <section>
 
-            <p class="section-label">OPTIMIZATION</p>
+    <p class="section-label">VISUALIZATIONS</p>
 
-            <h2>Improving the Network</h2>
+    <h2>Model Analysis</h2>
+
+    <div class="visualization-grid">
+
+        <div class="visualization-card">
+            <img src="../assets/baseline_confusion_matrix.png"
+                 alt="Baseline neural network confusion matrix">
+
+            <h3>Baseline Confusion Matrix</h3>
 
             <p>
-                Multiple neural network architectures were tested by changing
-                the number of hidden layers and neurons.
+                The baseline model correctly classified all 72 benign cases
+                and 39 of 42 malignant cases.
             </p>
+        </div>
+
+
+        <div class="visualization-card">
+            <img src="../assets/optimized_confusion_matrix.png"
+                 alt="Optimized neural network confusion matrix">
+
+            <h3>Optimized Confusion Matrix</h3>
 
             <p>
-                Comparing different architectures demonstrated how model
-                complexity can influence training behaviour, convergence,
-                and classification performance.
+                After architecture optimization, the model correctly
+                identified 40 of 42 malignant cases while maintaining
+                perfect classification of the benign cases.
             </p>
+        </div>
 
-        </section>
+
+        <div class="visualization-card">
+            <img src="../assets/loss_curve_comparison.png"
+                 alt="Baseline and optimized neural network loss curves">
+
+            <h3>Training Loss Comparison</h3>
+
+            <p>
+                Comparing the loss curves shows how the two architectures
+                converged during training.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 
         <!-- LOSS CURVE -->
