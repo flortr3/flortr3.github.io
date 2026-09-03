@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adult Income Classification | Flor Trejo</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            <a href="../index.html">FT</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- PROJECT INTRO -->
+
+        <section>
+
+            <p class="section-label">PROJECT 04</p>
+
+            <h1>Adult Income Classification</h1>
+
+            <p>
+                A binary classification project comparing multiple machine
+                learning algorithms to predict whether an individual's annual
+                income exceeds $50,000.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section>
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                The objective of this project was to predict whether an adult
+                earns more than $50,000 per year using demographic,
+                educational, employment, relationship, and financial
+                information.
+            </p>
+
+            <p>
+                Four classification algorithms were evaluated before and
+                after addressing class imbalance with SMOTE.
+            </p>
+
+        </section>
+
+
+        <!-- DATA -->
+
+        <section>
+
+            <p class="section-label">DATA</p>
+
+            <h2>Dataset</h2>
+
+            <p>
+                The Adult Income dataset contains demographic and employment
+                information used to classify individuals into two income
+                categories.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>Original Records</p>
+                    <h3>48,842</h3>
+                    <span>Observations</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Clean Records</p>
+                    <h3>48,790</h3>
+                    <span>After Duplicates</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Lower Income</p>
+                    <h3>76.06%</h3>
+                    <span>≤ $50K</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Higher Income</p>
+                    <h3>23.94%</h3>
+                    <span>&gt; $50K</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREPROCESSING -->
+
+        <section>
+
+            <p class="section-label">METHODOLOGY</p>
+
+            <h2>Data Preprocessing</h2>
+
+            <p>
+                The preprocessing workflow included duplicate removal,
+                missing-value handling, categorical encoding, robust feature
+                scaling, and a stratified train-test split.
+            </p>
+
+            <p>
+                Preprocessing transformations were fitted only on training
+                data to prevent data leakage.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Missing Value Imputation</span>
+                <span>One-Hot Encoding</span>
+                <span>RobustScaler</span>
+                <span>Train-Test Split</span>
+                <span>Pipeline</span>
+                <span>SMOTE</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODELS -->
+
+        <section>
+
+            <p class="section-label">MODELS</p>
+
+            <h2>Classification Models</h2>
+
+            <p>
+                Four machine learning algorithms were trained and compared
+                using the same test data and evaluation metrics.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Logistic Regression</span>
+                <span>K-Nearest Neighbors</span>
+                <span>Decision Tree</span>
+                <span>Linear SVM</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS BEFORE SMOTE -->
+
+        <section>
+
+            <p class="section-label">RESULTS</p>
+
+            <h2>Performance Before SMOTE</h2>
+
+            <p>
+                KNN produced the strongest overall discrimination before
+                balancing the training data, achieving the highest ROC-AUC
+                among the four models.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>KNN Accuracy</p>
+                    <h3>86.82%</h3>
+                    <span>Before SMOTE</span>
+                </div>
+
+                <div class="result-card">
+                    <p>KNN ROC-AUC</p>
+                    <h3>0.921</h3>
+                    <span>Best Model</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Higher-Income Recall</p>
+                    <h3>65.92%</h3>
+                    <span>&gt; $50K</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Higher-Income F1</p>
+                    <h3>70.55%</h3>
+                    <span>KNN</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SMOTE -->
+
+        <section>
+
+            <p class="section-label">CLASS IMBALANCE</p>
+
+            <h2>Applying SMOTE</h2>
+
+            <p>
+                The target variable was imbalanced, with approximately
+                three quarters of observations belonging to the lower-income
+                class.
+            </p>
+
+            <p>
+                SMOTE was applied only to the processed training set.
+                The minority class was synthetically increased until both
+                classes contained 29,687 training observations.
+            </p>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Before SMOTE</strong>
+
+                    <p>
+                        The training set contained 29,687 lower-income
+                        observations and 9,345 higher-income observations.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>After SMOTE</strong>
+
+                    <p>
+                        Both classes contained 29,687 training observations,
+                        creating a balanced training dataset.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTS AFTER SMOTE -->
+
+        <section>
+
+            <p class="section-label">RESULTS AFTER SMOTE</p>
+
+            <h2>The Recall Trade-Off</h2>
+
+            <p>
+                SMOTE substantially improved the model's ability to identify
+                higher-income observations, but this came with lower overall
+                accuracy and precision.
+            </p>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <p>KNN Accuracy</p>
+                    <h3>81.98%</h3>
+                    <span>After SMOTE</span>
+                </div>
+
+                <div class="result-card">
+                    <p>KNN ROC-AUC</p>
+                    <h3>0.916</h3>
+                    <span>After SMOTE</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Higher-Income Recall</p>
+                    <h3>84.89%</h3>
+                    <span>After SMOTE</span>
+                </div>
+
+                <div class="result-card">
+                    <p>Recall Improvement</p>
+                    <h3>+18.96</h3>
+                    <span>Percentage Points</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISUALIZATIONS -->
+
+        <section>
+
+            <p class="section-label">VISUALIZATIONS</p>
+
+            <h2>Model Analysis</h2>
+
+            <div class="visualization-grid">
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/adult_target_distribution.png"
+                         alt="Adult Income target class distribution">
+
+                    <h3>Class Imbalance</h3>
+
+                    <p>
+                        Approximately 76% of observations belong to the
+                        lower-income class and 24% to the higher-income class.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/adult_top_correlations.png"
+                         alt="Adult Income strongest feature correlations">
+
+                    <h3>Feature Relationships</h3>
+
+                    <p>
+                        Education and relationship-related variables showed
+                        some of the strongest linear relationships with the
+                        income target.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/adult_roc_before_smote.png"
+                         alt="ROC-AUC comparison before SMOTE">
+
+                    <h3>ROC-AUC Before SMOTE</h3>
+
+                    <p>
+                        KNN achieved the strongest ROC-AUC before balancing
+                        the training data.
+                    </p>
+
+                </div>
+
+
+                <div class="visualization-card">
+
+                    <img src="../assets/adult_roc_after_smote.png"
+                         alt="ROC-AUC comparison after SMOTE">
+
+                    <h3>ROC-AUC After SMOTE</h3>
+
+                    <p>
+                        KNN remained the strongest model by ROC-AUC after
+                        applying SMOTE.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <section>
+
+            <p class="section-label">KEY FINDINGS</p>
+
+            <h2>What the Results Show</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>KNN achieved the highest ROC-AUC</strong>
+
+                    <p>
+                        KNN produced a ROC-AUC of 0.9213 before SMOTE and
+                        0.9161 after SMOTE.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>SMOTE increased minority-class recall</strong>
+
+                    <p>
+                        KNN recall for adults earning more than $50K increased
+                        from 65.92% to 84.89%.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Higher recall came at a cost</strong>
+
+                    <p>
+                        After SMOTE, KNN accuracy decreased from 86.82%
+                        to 81.98%, illustrating the trade-off between
+                        sensitivity and overall accuracy.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>Model choice depends on the business objective</strong>
+
+                    <p>
+                        KNN without SMOTE is preferable when overall
+                        discrimination and accuracy matter most, while
+                        KNN with SMOTE is preferable when identifying more
+                        higher-income observations is the priority.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLS -->
+
+        <section>
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>Technologies Used</h2>
+
+            <div class="skills-grid">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>Imbalanced-learn</span>
+                <span>SMOTE</span>
+                <span>RobustScaler</span>
+                <span>OneHotEncoder</span>
+                <span>Matplotlib</span>
+                <span>Jupyter Notebook</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAKEAWAYS -->
+
+        <section>
+
+            <p class="section-label">KEY TAKEAWAYS</p>
+
+            <h2>What I Learned</h2>
+
+            <div class="findings-list">
+
+                <div>
+
+                    <strong>Accuracy can be misleading with imbalanced data</strong>
+
+                    <p>
+                        High overall accuracy does not necessarily mean that
+                        the minority class is being identified effectively.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>SMOTE changes the error trade-off</strong>
+
+                    <p>
+                        Balancing training data increased minority recall,
+                        but also increased false-positive predictions.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>ROC-AUC provides another perspective</strong>
+
+                    <p>
+                        Comparing ROC-AUC helped evaluate model discrimination
+                        independently of one fixed classification threshold.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+
+        <section class="resource-section">
+
+            <div class="resource-content">
+
+                <div>
+
+                    <p class="section-label">PROJECT RESOURCES</p>
+
+                    <h2>Explore the Full Project</h2>
+
+                    <p>
+                        Review the complete notebook for data cleaning,
+                        preprocessing, model comparison, SMOTE implementation,
+                        and evaluation.
+                    </p>
+
+                </div>
+
+
+                <div class="resource-buttons">
+
+                    <a href="../index.html#projects"
+                       class="secondary-button">
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Flor Trejo</p>
+    </footer>
+
+</body>
+
+</html>
