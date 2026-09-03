@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Breast Cancer Neural Network Classification | Flor Trejo</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="../index.html">FT</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <!-- PROJECT INTRODUCTION -->
+
+        <section>
+
+            <p class="section-label">PROJECT 02</p>
+
+            <h1>Breast Cancer Neural Network Classification</h1>
+
+            <p>
+                A machine learning classification project using a multilayer
+                perceptron neural network to classify breast tumors as
+                malignant or benign based on diagnostic measurements.
+            </p>
+
+        </section>
+
+
+        <!-- PROJECT OVERVIEW -->
+
+        <section>
+
+            <p class="section-label">OVERVIEW</p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                The objective of this project was to build and evaluate a
+                neural network classification model capable of identifying
+                whether a breast tumor is malignant or benign.
+            </p>
+
+            <p>
+                The project focused not only on prediction performance,
+                but also on understanding neural network architecture,
+                preprocessing requirements, model training, and optimization.
+            </p>
+
+        </section>
+
+
+        <!-- PROBLEM -->
+
+        <section>
+
+            <p class="section-label">PROBLEM</p>
+
+            <h2>Classification Problem</h2>
+
+            <p>
+                Diagnostic measurements describing characteristics of cell
+                nuclei are used as input features. The neural network learns
+                patterns within these measurements to classify each observation
+                into one of two diagnostic categories.
+            </p>
+
+        </section>
+
+
+        <!-- PREPROCESSING -->
+
+        <section>
+
+            <p class="section-label">DATA PREPROCESSING</p>
+
+            <h2>Preparing the Data</h2>
+
+            <p>
+                Before training the neural network, the dataset was prepared
+                to ensure that the model received appropriate numerical inputs.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Remove ID Feature</span>
+                <span>Target Encoding</span>
+                <span>Train-Test Split</span>
+                <span>Feature Scaling</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEURAL NETWORK -->
+
+        <section>
+
+            <p class="section-label">MODEL</p>
+
+            <h2>Neural Network Architecture</h2>
+
+            <p>
+                A Multilayer Perceptron classifier was used to learn nonlinear
+                relationships between the diagnostic features and the target
+                diagnosis.
+            </p>
+
+            <p>
+                Different hidden-layer configurations and neuron counts were
+                explored to evaluate whether changes in network complexity
+                improved classification performance.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Input Layer</span>
+                <span>Hidden Layers</span>
+                <span>Output Classification</span>
+                <span>Backpropagation</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVALUATION -->
+
+        <section>
+
+            <p class="section-label">MODEL EVALUATION</p>
+
+            <h2>Evaluating Performance</h2>
+
+            <p>
+                Model performance was evaluated using several classification
+                metrics to understand both overall prediction accuracy and
+                the types of classification errors made by the neural network.
+            </p>
+
+            <div class="skills-grid">
+
+                <span>Accuracy</span>
+                <span>Confusion Matrix</span>
+                <span>Precision</span>
+                <span>Recall</span>
+                <span>F1-Score</span>
+                <span>Classification Report</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- OPTIMIZATION -->
+
+        <section>
+
+            <p class="section-label">OPTIMIZATION</p>
+
+            <h2>Improving the Network</h2>
+
+            <p>
+                Multiple neural network architectures were tested by changing
+                the number of hidden layers and neurons.
+            </p>
+
+            <p>
+                Comparing different architectures demonstrated how model
+                complexity can influence training behaviour, convergence,
+                and classification performance.
+            </p>
+
+        </section>
+
+
+        <!-- LOSS CURVE -->
+
+        <section>
+
+            <p class="section-label">TRAINING</p>
+
+            <h2>Loss Curve</h2>
+
+            <p>
+                The training loss was monitored across iterations to understand
+                how the neural network learned over time. A decreasing loss
+                indicates that the model is progressively reducing prediction
+                error during training.
+            </p>
+
+        </section>
+
+
+        <!-- TOOLS -->
+
+        <section>
+
+            <p class="section-label">TOOLS</p>
+
+            <h2>Technologies Used</h2>
+
+            <div class="skills-grid">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>Matplotlib</span>
+                <span>MLPClassifier</span>
+                <span>StandardScaler</span>
+                <span>Jupyter Notebook</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAKEAWAYS -->
+
+        <section>
+
+            <p class="section-label">KEY TAKEAWAYS</p>
+
+            <h2>What I Learned</h2>
+
+            <div class="findings-list">
+
+                <div>
+                    <strong>Scaling matters for neural networks</strong>
+                    <p>
+                        Standardizing features helps neural networks train more
+                        effectively when input variables have different scales.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Architecture affects performance</strong>
+                    <p>
+                        Changing hidden layers and neurons can influence both
+                        predictive performance and model complexity.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Accuracy alone is not enough</strong>
+                    <p>
+                        The confusion matrix, precision, recall, and F1-score
+                        provide a more complete view of classification quality.
+                    </p>
+                </div>
+
+                <div>
+                    <strong>Training loss provides useful information</strong>
+                    <p>
+                        The loss curve helps visualize whether the neural
+                        network is successfully learning during training.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESOURCES -->
+
+        <section class="resource-section">
+
+            <div class="resource-content">
+
+                <div>
+
+                    <p class="section-label">PROJECT RESOURCES</p>
+
+                    <h2>Explore the Full Project</h2>
+
+                    <p>
+                        Review the notebook for the complete preprocessing,
+                        neural network architecture, model evaluation,
+                        optimization, and Python implementation.
+                    </p>
+
+                </div>
+
+                <div class="resource-buttons">
+
+                    <a href="../index.html#projects"
+                       class="secondary-button">
+                        Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 Flor Trejo</p>
+    </footer>
+
+</body>
+
+</html>
