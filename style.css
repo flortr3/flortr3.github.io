@@ -557,6 +557,46 @@ section {
     background-color: var(--text-primary);
     color: white;
 }
+/* =========================
+   PORTFOLIO SKILLS
+========================= */
+
+.skill-category {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px;
+}
+
+.skill-category h3 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.skill-category p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+
+/* PROJECT INTRO */
+
+.projects-intro {
+    max-width: 760px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+
+/* CONTACT BUTTONS */
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 
 @media (max-width: 768px) {
 .resource-section {
