@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f7f4;
+    color: #252525;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 10%;
+    background-color: #e8e2da;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.4rem;
+    color: #5f5f5f;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 40px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.05rem;
+    max-width: 850px;
+    color: #4a4a4a;
+}
+
+/* PROJECT */
+
+section:nth-of-type(3) {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 60px 25px;
+        min-height: 50vh;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 50px 25px;
+    }
+
+    section {
+        margin-bottom: 55px;
+    }
+
+    section:nth-of-type(3) {
+        padding: 25px;
+    }
+}
