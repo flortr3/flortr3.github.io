@@ -49,7 +49,87 @@
     <p class="section-label">RESULTS</p>
 
     <h2>Model Performance</h2>
+<section>
 
+    <p class="section-label">VISUALIZATIONS</p>
+
+    <h2>Project Visualizations</h2>
+
+    <div class="visualization-grid">
+
+        <div class="visualization-card">
+            <img src="../assets/target_distribution.png"
+                 alt="Target distribution of mobile phone price classes">
+
+            <h3>Balanced Target Distribution</h3>
+
+            <p>
+                The dataset contains four equally represented price categories,
+                with 500 mobile phones in each class.
+            </p>
+        </div>
+
+
+        <div class="visualization-card">
+            <img src="../assets/ram_vs_price_range.png"
+                 alt="Relationship between RAM and mobile phone price range">
+
+            <h3>RAM vs. Price Range</h3>
+
+            <p>
+                RAM showed the strongest relationship with price category,
+                indicating that memory capacity is an important predictor
+                of mobile phone price positioning.
+            </p>
+        </div>
+
+
+        <div class="visualization-card">
+            <img src="../assets/model_accuracy_comparison.png"
+                 alt="Accuracy comparison of machine learning models">
+
+            <h3>Model Accuracy Comparison</h3>
+
+            <p>
+                Hyperopt and Optuna produced the strongest results,
+                increasing average SVM accuracy from 95.15% to 97.60%.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+                <section>
+
+    <p class="section-label">MY CONTRIBUTION</p>
+
+    <h2>Logistic Regression Extension</h2>
+
+    <p>
+        In addition to reproducing the SVM methodology from the research
+        paper, I evaluated Logistic Regression as a simpler and more
+        interpretable multiclass classification alternative.
+    </p>
+
+    <p>
+        StandardScaler and Logistic Regression were combined inside a
+        Scikit-learn Pipeline so that scaling was learned only from the
+        training data within each fold, preventing preprocessing leakage.
+        The model was evaluated using the same 5-fold stratified
+        cross-validation framework for a fair comparison.
+    </p>
+
+    <div class="result-card contribution-result">
+
+        <p>Logistic Regression</p>
+
+        <h3>96.10%</h3>
+
+        <span>Average Accuracy</span>
+
+    </div>
+
+</section>
     <p>
         Hyperparameter optimization significantly improved the performance
         of the baseline Support Vector Machine. Both Hyperopt and Optuna
@@ -248,6 +328,29 @@
         <section>
 
             <a href="../index.html#projects" class="secondary-button">
+               <section>
+
+    <p class="section-label">PROJECT RESOURCES</p>
+
+    <h2>Explore the Full Project</h2>
+
+    <p>
+        View the complete presentation for additional details about the
+        research paper, methodology, optimization process, results,
+        and project contribution.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="https://canva.link/uov9ks1l08h8c2q"
+           target="_blank"
+           class="primary-button">
+            View Presentation
+        </a>
+
+    </div>
+
+</section>
                 ← Back to Projects
             </a>
 
