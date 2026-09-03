@@ -440,6 +440,124 @@ footer {
     max-width: 320px;
     margin-top: 35px;
 }
+
+/* =========================
+   SHARED PROJECT COLOR SYSTEM
+========================= */
+
+:root {
+    --background: #f8f7f4;
+    --section-background: #ebe5dd;
+    --card-background: #ffffff;
+
+    --text-primary: #252525;
+    --text-secondary: #5f5f5f;
+
+    --accent: #a7654b;
+
+    --border: #e4e0da;
+}
+
+
+/* GENERAL PROJECT COLORS */
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+main {
+    background-color: var(--background);
+}
+
+section {
+    background-color: transparent;
+}
+
+
+/* LABELS */
+
+.section-label {
+    color: var(--accent);
+}
+
+
+/* RESULT CARDS */
+
+.result-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+}
+
+.result-card p {
+    color: var(--text-secondary);
+}
+
+.result-card span {
+    color: var(--accent);
+}
+
+
+/* SKILL CARDS */
+
+.skills-grid span {
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+
+/* FINDINGS */
+
+.findings-list div {
+    border-left-color: var(--accent);
+}
+
+.findings-list p {
+    color: var(--text-secondary);
+}
+
+
+/* VISUALIZATION CARDS */
+
+.visualization-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border);
+}
+
+.visualization-card p {
+    color: var(--text-secondary);
+}
+
+
+/* RESOURCES */
+
+.resource-section {
+    background-color: var(--section-background);
+}
+
+
+/* BUTTONS */
+
+.primary-button {
+    background-color: var(--text-primary);
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: var(--accent);
+}
+
+.secondary-button {
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
+}
+
+.secondary-button:hover {
+    background-color: var(--text-primary);
+    color: white;
+}
+
 @media (max-width: 768px) {
 .resource-section {
     padding: 35px 25px;
