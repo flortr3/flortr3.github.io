@@ -85,7 +85,7 @@ header {
 
     padding: 100px 10%;
 
-    background-color: #ebe5dd;
+    background-color: var(--section-background);
 }
 
 .intro {
@@ -446,16 +446,22 @@ footer {
 ========================= */
 
 :root {
-    --background: #f8f7f4;
-    --section-background: #ebe5dd;
-    --card-background: #ffffff;
 
-    --text-primary: #252525;
-    --text-secondary: #5f5f5f;
+    --background: #F4F6F8;
 
-    --accent: #a7654b;
+    --section-background: #E9EEF3;
 
-    --border: #e4e0da;
+    --card-background: #FFFFFF;
+
+    --text-primary: #1F2933;
+
+    --text-secondary: #667085;
+
+    --accent: #274C77;
+
+    --border: #D9E0E7;
+
+    --navy: #0F2747;
 }
 
 
@@ -540,7 +546,7 @@ section {
 /* BUTTONS */
 
 .primary-button {
-    background-color: var(--text-primary);
+    background-color: var(--navy);
     color: white;
 }
 
