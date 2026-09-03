@@ -125,39 +125,40 @@ header h2 {
    BUTTONS
 ========================= */
 
-.primary-button,
-.secondary-button {
-    display: inline-block;
-
-    padding: 13px 24px;
-
-    border-radius: 4px;
-
-    font-size: 0.95rem;
-    font-weight: 600;
-
-    transition: 0.2s;
-}
-
 .primary-button {
-    background-color: #252525;
-    color: white;
+    display: inline-block;
+    background-color: #0F2747;
+    color: #FFFFFF;
+    padding: 15px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #0F2747;
+    transition: all 0.2s ease;
 }
 
 .primary-button:hover {
-    background-color: #a7654b;
+    background-color: #274C77;
+    border-color: #274C77;
 }
 
 .secondary-button {
-    border: 1px solid #252525;
+    display: inline-block;
+    background-color: transparent;
+    color: #1F2933;
+    padding: 15px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #1F2933;
+    transition: all 0.2s ease;
 }
 
 .secondary-button:hover {
-    background-color: #252525;
-    color: white;
+    background-color: #0F2747;
+    color: #FFFFFF;
+    border-color: #0F2747;
 }
-
-
 /* =========================
    MAIN
 ========================= */
@@ -539,9 +540,27 @@ section {
 /* RESOURCES */
 
 .resource-section {
-    background-color: var(--section-background);
+    background-color: #E9EEF3;
+    border-radius: 10px;
+    padding: 70px 80px;
 }
 
+.resource-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.resource-content > div:first-child {
+    max-width: 620px;
+}
+
+.resource-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
 
 /* BUTTONS */
 
@@ -605,6 +624,29 @@ section {
 }
 
 @media (max-width: 768px) {
+   nav {
+    background-color: #0F2747;
+}
+
+.resource-section {
+    padding: 40px 25px;
+}
+
+.resource-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.resource-buttons {
+    width: 100%;
+    flex-direction: column;
+}
+
+.resource-buttons a {
+    width: 100%;
+    text-align: center;
+}
 .resource-section {
     padding: 35px 25px;
 }
@@ -661,4 +703,89 @@ section {
     #contact {
         padding: 35px 25px;
     }
+}
+
+/* =========================
+   NAVIGATION - DEEP NAVY
+========================= */
+
+nav {
+    background-color: #0F2747;
+    border-bottom: none;
+}
+
+.logo a {
+    color: #FFFFFF;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+}
+
+.nav-links a:hover {
+    color: #B8C7D9;
+}
+
+.logo a {
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   PROJECT PAGE COLORS
+========================= */
+
+body {
+    background-color: #F4F6F8;
+    color: #1F2933;
+}
+
+main {
+    background-color: #F4F6F8;
+}
+
+.section-label {
+    color: #274C77;
+}
+
+.result-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E0E7;
+}
+
+.result-card p {
+    color: #667085;
+}
+
+.result-card span {
+    color: #274C77;
+}
+
+.visualization-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E0E7;
+}
+
+.visualization-card p {
+    color: #667085;
+}
+
+.findings-list div {
+    border-left: 3px solid #274C77;
+}
+
+.findings-list p {
+    color: #667085;
+}
+
+.skills-grid span {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E0E7;
+    color: #1F2933;
+}
+
+.resource-section {
+    background-color: #E9EEF3;
 }
