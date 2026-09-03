@@ -121,7 +121,6 @@ header h2 {
     flex-wrap: wrap;
 }
 
-
 /* =========================
    BUTTONS
 ========================= */
@@ -294,6 +293,27 @@ margin-bottom: 30px;
     border-radius: 8px;
 }
 
+/* =========================
+   PROJECT RESOURCES
+========================= */
+
+.resource-section {
+    background-color: #ebe5dd;
+    padding: 60px;
+    border-radius: 8px;
+}
+
+.resource-section p:not(.section-label) {
+    max-width: 760px;
+    color: #555;
+}
+
+.resource-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
 
 /* =========================
    FOOTER
