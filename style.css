@@ -307,12 +307,23 @@ margin-bottom: 30px;
     padding: 70px 80px;
 }
 
+/* =========================
+   PROJECT RESOURCES
+========================= */
+
+.resource-section {
+    background-color: var(--section-background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 65px 75px;
+}
+
 .resource-content {
     display: block;
 }
 
 .resource-content > div:first-child {
-    max-width: 760px;
+    max-width: 800px;
 }
 
 .resource-content h2 {
@@ -321,28 +332,44 @@ margin-bottom: 30px;
 }
 
 .resource-content p:not(.section-label) {
-    max-width: 720px;
+    max-width: 760px;
     color: var(--text-secondary);
     line-height: 1.7;
 }
 
+
+/* BUTTONS AT THE BOTTOM */
+
 .resource-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
     gap: 14px;
-    max-width: 650px;
+    flex-wrap: wrap;
     margin-top: 35px;
 }
 
+/* ALL RESOURCE BUTTONS SAME COLOR */
+
 .resource-buttons a {
+    background-color: #0F2747 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #0F2747 !important;
+
+    padding: 15px 26px;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: 600;
     text-align: center;
-    min-height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
 }
 
-/* =========================
+.resource-buttons a:hover {
+    background-color: #274C77 !important;
+    border-color: #274C77 !important;
+    transform: translateY(-2px);
+}/* =========================
    FOOTER
 ========================= */
 
