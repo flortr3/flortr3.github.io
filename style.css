@@ -1005,3 +1005,126 @@ main {
         width: 100% !important;
     }
 }
+/* =========================
+   PROJECT RESOURCES - POLISHED DESIGN
+========================= */
+
+.resource-section {
+    background-color: #E9EEF3 !important;
+    border: 1px solid #D9E0E7 !important;
+    border-radius: 12px !important;
+
+    padding: 55px 65px !important;
+}
+
+.resource-section .resource-content {
+    display: block !important;
+}
+
+
+/* TEXT AREA */
+
+.resource-section .resource-content > div:first-child {
+    max-width: 850px !important;
+}
+
+.resource-section .section-label {
+    margin-bottom: 20px !important;
+}
+
+.resource-section h2 {
+    font-size: 2.5rem !important;
+    line-height: 1.15 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+
+    color: #1F2933 !important;
+}
+
+.resource-section p:not(.section-label) {
+    max-width: 780px !important;
+
+    color: #667085 !important;
+
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+
+    margin-bottom: 0 !important;
+}
+
+
+/* BUTTON AREA */
+
+.resource-section .resource-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+
+    gap: 12px !important;
+
+    width: 100% !important;
+
+    margin-top: 32px !important;
+    padding-top: 26px !important;
+
+    border-top: 1px solid #D1D9E2 !important;
+
+    justify-content: flex-start !important;
+}
+
+
+/* ALL BUTTONS */
+
+.resource-section .resource-buttons a {
+    background-color: #0F2747 !important;
+    color: #FFFFFF !important;
+
+    border: 1px solid #0F2747 !important;
+    border-radius: 6px !important;
+
+    min-width: 175px !important;
+    width: auto !important;
+
+    padding: 13px 22px !important;
+
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+
+    text-align: center !important;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease !important;
+}
+
+
+/* HOVER */
+
+.resource-section .resource-buttons a:hover {
+    background-color: #274C77 !important;
+    border-color: #274C77 !important;
+
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+
+    .resource-section {
+        padding: 38px 25px !important;
+    }
+
+    .resource-section h2 {
+        font-size: 2rem !important;
+    }
+
+    .resource-section .resource-buttons {
+        flex-direction: column !important;
+    }
+
+    .resource-section .resource-buttons a {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+}
