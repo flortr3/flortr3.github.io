@@ -1066,9 +1066,7 @@ main {
     width: 100% !important;
 
     margin-top: 32px !important;
-    padding-top: 26px !important;
-
-    border-top: 1px solid #D1D9E2 !important;
+    padding-top: 8px !important;
 
     justify-content: flex-start !important;
 }
