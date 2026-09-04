@@ -339,7 +339,6 @@ footer {
     color: #777;
 }
 
-
 /* =========================
    MOBILE
 ========================= */
@@ -611,15 +610,8 @@ section {
     margin-bottom: 40px;
 }
 
-
 /* CONTACT BUTTONS */
 
-.contact-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
 /* =========================
    HOMEPAGE SKILLS SECTION
 ========================= */
@@ -660,8 +652,70 @@ section {
 .skill-list li:last-child {
     border-bottom: none;
 }
+/* =========================
+   CONTACT SECTION - FINAL
+========================= */
+
+#contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.contact-card {
+    background-color: var(--section-background);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 55px 65px;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.contact-text {
+    max-width: 680px;
+}
+
+.contact-text h2 {
+    margin-bottom: 18px;
+}
+
+.contact-text p:not(.section-label) {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.contact-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
 
 @media (max-width: 768px) {
+   .contact-card {
+    padding: 40px 25px;
+}
+
+.contact-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.contact-buttons {
+    width: 100%;
+    flex-direction: column;
+}
+
+.contact-buttons a {
+    width: 100%;
+    text-align: center;
+}
    .skills-showcase {
     grid-template-columns: 1fr;
 }
