@@ -947,3 +947,61 @@ main {
     background-color: #0F2747;
     color: #FFFFFF;
 }
+/* =========================
+   FINAL PROJECT RESOURCES OVERRIDE
+========================= */
+
+.resource-section .resource-content {
+    display: block !important;
+}
+
+.resource-section .resource-content > div:first-child {
+    width: 100% !important;
+    max-width: 800px !important;
+}
+
+.resource-section .resource-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-top: 35px !important;
+
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    gap: 14px !important;
+
+    position: static !important;
+}
+
+.resource-section .resource-buttons a {
+    background-color: #0F2747 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #0F2747 !important;
+
+    width: auto !important;
+    min-width: 180px;
+
+    padding: 15px 24px;
+    text-align: center;
+}
+
+.resource-section .resource-buttons a:hover {
+    background-color: #274C77 !important;
+    border-color: #274C77 !important;
+}
+@media (max-width: 768px) {
+
+    .resource-section .resource-buttons {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .resource-section .resource-buttons a {
+        width: 100% !important;
+    }
+}
