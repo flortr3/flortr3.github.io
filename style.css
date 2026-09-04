@@ -882,3 +882,13 @@ main {
 .resource-section {
     background-color: #E9EEF3;
 }
+.resource-buttons .secondary-button {
+    background-color: transparent;
+    color: #0F2747;
+    border: 1px solid #0F2747;
+}
+
+.resource-buttons .secondary-button:hover {
+    background-color: #0F2747;
+    color: #FFFFFF;
+}
