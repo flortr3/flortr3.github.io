@@ -241,15 +241,21 @@ margin-bottom: 30px;
     color: #777;
 }
 
+/* PROJECT LINKS */
+
 .project-link {
+    color: #274C77 !important;
     font-weight: 600;
-    color: #a7654b;
+    text-decoration: none;
 }
 
 .project-link:hover {
-    text-decoration: underline;
+    color: #0F2747 !important;
 }
-
+.project-card {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E0E7;
+}
 /* =========================
    SKILLS
 ========================= */
