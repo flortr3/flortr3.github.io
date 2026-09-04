@@ -739,7 +739,21 @@ section {
     flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {.resource-section {
+    padding: 40px 25px;
+}
+
+.resource-content h2 {
+    font-size: 2rem;
+}
+
+.resource-buttons {
+    flex-direction: column;
+}
+
+.resource-buttons a {
+    width: 100%;
+}
    .contact-card {
     padding: 40px 25px;
 }
