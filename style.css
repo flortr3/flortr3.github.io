@@ -521,7 +521,6 @@ section {
     color: var(--text-secondary);
 }
 
-
 /* VISUALIZATION CARDS */
 
 .visualization-card {
@@ -600,7 +599,6 @@ section {
     line-height: 1.7;
     font-size: 0.95rem;
 }
-
 
 /* PROJECT INTRO */
 
@@ -809,10 +807,6 @@ nav {
     border-bottom: none;
 }
 
-.logo a {
-    color: #FFFFFF !important;
-}
-
 .nav-links a {
     color: #FFFFFF;
 }
@@ -879,6 +873,9 @@ main {
     background-color: #FFFFFF;
     border: 1px solid #D9E0E7;
     color: #1F2933;
+}
+.logo a {
+    color: #FFFFFF !important;
 }
 
 .resource-section {
